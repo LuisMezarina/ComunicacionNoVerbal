@@ -1,0 +1,173 @@
+/* Estilos generales para todas las páginas */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Barra de navegación común */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+}
+
+nav a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para index.html (Inicio) */
+body.index main p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos específicos para Enlace_2.html (Cursos) */
+body.cursos main p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 30px;
+    background-color: #e8f4fc;
+    border-radius: 8px;
+}
+
+/* Estilos específicos para Enlace_3.html (Blog) */
+body.blog main p {
+    font-style: italic;
+    font-size: 1.3em;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+}
+
+/* Estilos específicos para Enlace_4.html (Bases Científicas) */
+body.bases #basesCientificas {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.contenidoDos {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contenidoBases {
+    flex: 1;
+}
+
+.contenidoBases p {
+    text-align: justify;
+}
+
+.contenidoBases img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Estilos específicos para Enlace_5.html (Contacto) */
+body.contacto main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+body.contacto section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+body.contacto section:hover {
+    transform: translateY(-5px);
+}
+
+body.contacto img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+body.contacto p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    nav a {
+        width: 80%;
+        text-align: center;
+    }
+    
+    .contenidoDos {
+        flex-direction: column;
+    }
+    
+    body.contacto main {
+        grid-template-columns: 1fr;
+    }
+}
